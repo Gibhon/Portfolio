@@ -4,9 +4,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: #ffffff;
+    /* all text white */
 }
-
 
 /* Body */
 body {
@@ -14,11 +14,20 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
-    grid-template-areas: 'header header img nav'
+    grid-template-areas:
+        'header header img nav'
         'main main main main'
         'footer footer footer footer';
 }
 
+/* SectionBox Styles */
+.sectionBoxes {
+    background-color: #0b0f18;
+    border: 2px solid #131929;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
 
 /* Header */
 header {
@@ -28,31 +37,39 @@ header {
 .mainIntro {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px;
-    background-color: #0c0f18;
-    margin: 10px 10px;
-    border-radius: 30px;
-    color: #dad8d8;
+    margin: 10px;
 }
-
 
 #name {
     font-size: 3.5rem;
+    color: #ffffff;
 }
 
 #mainSpecialities {
     margin-top: 20px;
     font-size: 2rem;
+    color: #ffffff;
 }
 
 #philosophicalIntro {
     margin-top: 5px;
     font-size: 1.2rem;
-    background-color: #090b11;
     padding: 10px;
+    background-color: #090b11;
     border-radius: 10px;
 }
 
+/* imagePart */
+.image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.image img {
+    width: 70%;
+    border-radius: 50px;
+}
 
 /* Nav_part */
 nav {
@@ -61,15 +78,17 @@ nav {
 
 .contactInfo {
     margin-top: 40px;
+    padding: 10px;
+    height: 80px;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
     font-size: 2.3rem;
     background-color: #2f3052;
-    padding: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 80px;
 }
 
 .contactInfo ul {
@@ -83,13 +102,8 @@ nav {
     border-radius: 10px;
     padding: 5px;
     border: 2px solid transparent;
+    color: #ffffff;
 }
-
-.contactInfo a:hover {
-    background-color: #0b0f1f;
-    border: 2px solid white;
-}
-
 
 /* Main */
 main {
@@ -97,30 +111,29 @@ main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto;
-    grid-template-areas: 'skill skill MProjects MProjects MProjects'
+    grid-template-areas:
+        'skill skill MProjects MProjects MProjects'
         'AProjects AProjects AProjects AProjects AProjects';
     gap: 50px;
 }
 
+/* skillSection */
 .skillSection {
-    background-color: #0B0F18;
     grid-area: skill;
-    border-radius: 20px;
-    border: 2px solid #131929;
-    padding: 10px;
-    margin: 10px;
 }
 
-.skillSection h2 {
+.subHeadings {
     font-size: 1.8rem;
     padding-left: 5px;
+    color: #ffffff;
 }
 
 .skillContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 14px;
     justify-content: flex-start;
+    margin-top: 15px;
 }
 
 .skillBox {
@@ -130,25 +143,93 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 
-
+/* mainProjects */
 .mainProjects {
     grid-area: MProjects;
-    background-color: rgb(39, 23, 26);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
 }
 
+.mainProjectBox {
+    background-color: #090b11;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 1px rgb(90, 81, 81);
+}
+
+.tags {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tags li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: #17191d;
+    border-radius: 10px;
+    color: #facc15;
+}
+
+/* AllProjectsSection */
 .allProjects {
     grid-area: AProjects;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #0B0F18;
 }
 
+.allProjects h1 {
+    margin: 5px 0px 5px 1.6%;
+    color: #ffffff;
+}
 
+.allProjects p {
+    margin: 5px 0px 10px 1.6%;
+    color: #ffffff;
+}
 
+.apBoxArea {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #0B0F18;
+}
 
+.APboxes {
+    background-color: #090b11;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 1px rgb(90, 81, 81);
+}
 
+.ppb {
+    width: 47.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
 
+/* Footer */
 footer {
     grid-area: footer;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
